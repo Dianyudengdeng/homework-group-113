@@ -10,6 +10,7 @@ SHA256：攻击场景是secret内容未知，但已知H(M)、M的长度
 通过长度扩攻击，攻击者在不知道secret内容的情况下伪造一个M'=M||padding||append以及对应的H(M')
 在生成有效哈希值的前提下开展进一步攻击。 
 我所完成的工作主要是修改Hash的主体算法，使得迭代压缩中可以利用已有的哈希值生成新的有效哈希对；编写独立的padding函数，直接获得哈希结果以验证长度扩展攻击效果。  
+
 Project4：do your best to optimize SM3 implementation (software)  
 由于哈希函数受输入长度的影响较大，这里使用测试的都是<56bytes的输入。  
 Openssl：  
