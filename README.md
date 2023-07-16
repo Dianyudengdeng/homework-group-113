@@ -6,7 +6,7 @@ Project1：implement the naïve birthday attack of reduced SM3
 攻击结果：只计算了哈希结果前四个字节发生碰撞的情况，主要原因在于生日攻击的空间复杂度为O(2^(n/2))，若要求八字节的碰撞结果，大致需要2^32*（32+8）bytes约170GB的存储空间，显然是不现实的。  
 <img width="461" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/f21a1401-be2e-4308-a7bb-c8bf87e0fb3d">
 
-Project2：implement the Rho method of reduced SM3  
+Project2：implement the Rho method of reduced SM3    
 Project3：implement length extension attack for SM3, SHA256, etc  
 这里使用了Project4的SM3实现以及参考了别人的SHA256实现，对于SM3和SHA256的长度扩展攻击设计了不同的攻击场景  
 SM3：攻击场景是服务器在生成哈希时，在用户输入前加入secret信息使得攻击者无法在未知secret内容的前提下生成input对应的H(input)；  
