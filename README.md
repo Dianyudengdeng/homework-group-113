@@ -15,7 +15,7 @@ memcpy：
 <img width="451" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5fb28fcd-f8bd-455f-9531-042059ae1af5">  
 严格相等：  
 <img width="459" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/b062b602-8902-4c31-8e5b-0cfd9195a950">  
-可以看到不严格相等的情况甚至更快完成了寻找碰撞的过程，一说明了只要H_1和H_2的迭代路径相同即可实现部署Rho Method攻击的目的。  
+可以看到不严格相等的情况甚至更快完成了寻找碰撞的过程，说明了只要H_1和H_2的迭代路径相同即可实现部署Rho Method攻击的目的。  
 
 Project3：implement length extension attack for SM3, SHA256, etc  
 这里使用了Project4的SM3实现以及参考了别人的SHA256实现，对于SM3和SHA256的长度扩展攻击设计了不同的攻击场景  
