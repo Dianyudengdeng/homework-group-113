@@ -1,12 +1,22 @@
 # homework-group-113  
 实验环境：CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz   2.30 GHz  
-Project1：implement the naïve birthday attack of reduced SM3
+Project1：implement the naïve birthday attack of reduced SM3  
 主要做的工作：修改Project4 SM3的实现方式，提供利于攻击的API以及避免多线程加速时出现混乱；完成各类数据结构相互转换的工作，实施基础的生日攻击。  
 对于input的迭代，使用上一轮生成Hash值的进行赋值，即len(input)稳定在32bytes；一是保证SM3 padding的稳定，一轮迭代压缩即可完成；二是保证遍历完成一定会发生碰撞（256bit->256bit)。  
 攻击结果：只计算了哈希结果前四个字节发生碰撞的情况，主要原因在于生日攻击的空间复杂度为O(2^(n/2))，若要求八字节的碰撞结果，大致需要2^32*（32+8）bytes约170GB的存储空间，显然是不现实的。  
 <img width="461" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/f21a1401-be2e-4308-a7bb-c8bf87e0fb3d">
 
 Project2：implement the Rho method of reduced SM3    
+主要做的工作：实现Rho Method寻找SM3部分字节碰撞的代码；优化加速寻找碰着；分析不同迭代方法的区别；  
+在一些参考文献中，要求Rho Method遵循哈希输入是上一轮哈希的输出，直接的想法是使用memcpy从Hash到input，但是实际上在小端序的系统中这意味着SM3的input并不严格等于上一轮的Hash结果；另一种是使用循环便遍历初始化input以严格按照大端序存储。  
+按照我的理解要求哈希输入是上一轮哈希的输出事实上是要求H_1和H_2的迭代路径相同以最终实现成环寻找碰撞的目的，只要保证H_1和H_2的迭代路径相同，是否还需要要求哈希输入与上一轮哈希的输出严格相等？  
+以3bytes的碰撞为例：  
+memcpy：  
+<img width="451" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5fb28fcd-f8bd-455f-9531-042059ae1af5">  
+严格相等：  
+<img width="459" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/b062b602-8902-4c31-8e5b-0cfd9195a950">  
+可以看到不严格相等的情况甚至更快完成了寻找碰撞的过程，一说明了只要H_1和H_2的迭代路径相同即可实现部署Rho Method攻击的目的。  
+
 Project3：implement length extension attack for SM3, SHA256, etc  
 这里使用了Project4的SM3实现以及参考了别人的SHA256实现，对于SM3和SHA256的长度扩展攻击设计了不同的攻击场景  
 SM3：攻击场景是服务器在生成哈希时，在用户输入前加入secret信息使得攻击者无法在未知secret内容的前提下生成input对应的H(input)；  
