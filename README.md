@@ -25,7 +25,7 @@ memcpy：
 <img width="785" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/0a5b388e-20ac-4c26-adf7-d18406a6c104">
 在寻找四字节的碰撞中，我记录了两轮的初始输入，但是仍然全部相同，这意味着碰撞发生在更前面，因为程序的设计中无法准确定位，Hash函数具有单向性，动态定位则要耗费内存，不符合Rho Method的设计初衷，故该方法是不可行的。  
 最终使用memcmp(input_1[i],input_2[i],InputLength)!=0，在多线程加速下找到的4byte的碰撞：  
-<img width="622" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/712cba25-74fd-48d1-b25d-1abf11b62c61">
+<img width="622" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/712cba25-74fd-48d1-b25d-1abf11b62c61">  
 
 
 Project3：implement length extension attack for SM3, SHA256, etc  
