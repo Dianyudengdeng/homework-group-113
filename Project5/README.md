@@ -5,4 +5,6 @@ Impl Merkle Tree following RFC6962
 例如添加五个结点：  
 <img width="295" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/8641d4d4-c5c5-419d-9dfd-5ff1b99fbc16">
 <img width="723" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/13ba8d8a-2fc0-4a86-b45a-ddb7e7ee8763">  
-从计算hash值的过程中可以看出构建的树结构是相同的。
+从计算hash值的过程中可以看出构建的树结构是相同的。  
+在生成树的过程中，使用散列表MTH以存储内部结点的Hash值，注意这里为了演示存储了叶子结点的Hash值，实际运行中并不会存储。因为在进行Inclusion/Exclusion proof证明时，只会用到已经获取的叶子结点的Hash值，所以并不会产生影响。  
+根据RFC6962，调整索引设计实现的Audit Path和Consistency Proofs：  
