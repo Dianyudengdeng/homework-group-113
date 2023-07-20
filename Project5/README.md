@@ -8,3 +8,4 @@ Impl Merkle Tree following RFC6962
 从计算hash值的过程中可以看出构建的树结构是相同的。  
 在生成树的过程中，使用散列表MTH以存储内部结点的Hash值，注意这里为了演示存储了叶子结点的Hash值，实际运行中并不会存储。因为在进行Inclusion/Exclusion proof证明时，只会用到已经获取的叶子结点的Hash值，所以并不会产生影响。  
 根据RFC6962，调整索引设计实现的Audit Path和Consistency Proofs：  
+<img width="571" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d4393030-0374-42c1-9050-2431f111653c">
