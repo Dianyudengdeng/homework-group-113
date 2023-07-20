@@ -11,4 +11,6 @@ Impl Merkle Tree following RFC6962
 <img width="571" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d4393030-0374-42c1-9050-2431f111653c">
 <img width="545" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d1da97d9-9b0c-4104-a835-bcf1c9d86a62">  
 而后的Inclusion/Exclusion proof都是基于Audit Path计算根节点索引值与MerkleRoot得到的结果相比进行判断。    
-添加十万个结点：  
+添加十万个结点后进行InclusionProof：
+<img width="628" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/9ffedc59-5ac6-4a0b-8750-174cb1867d1a">
+
