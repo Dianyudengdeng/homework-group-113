@@ -12,6 +12,6 @@ Impl Merkle Tree following RFC6962
 <img width="545" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d1da97d9-9b0c-4104-a835-bcf1c9d86a62">  
 而后的Inclusion/Exclusion proof都是基于Audit Path计算根节点索引值与MerkleRoot得到的结果相比进行判断。    
 添加十万个结点后进行InclusionProof：  
-<img width="722" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/9ffedc59-5ac6-4a0b-8750-174cb1867d1a">  
+<img width="722" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/80c29ab5-7c97-42d0-b5cf-2d312e7a22fb">  
 <img width="722" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/c26c387b-911d-4215-9d72-4f48a6e59e74">  
-对比可知，由于Merkle Tree的设计，InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，InclusionProof的时间开销并没有较大的差异。
+对比可知，由于Merkle Tree的设计，InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，尽管可以直观感受到树构建过程的时间差异，InclusionProof的时间开销并没有较大的差异。
