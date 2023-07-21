@@ -1,4 +1,4 @@
-Project6:Impl this protocol with actual network communication (Range Proof With Hash Function)  
+Project6：Impl this protocol with actual network communication (Range Proof With Hash Function)  
 主要做的工作：实现基础的对于年龄的Range Proof；模拟实际网络环境，进行数据传输，实现可信第三方、证明者、验证者的交互。
 Cryptography.py 定义了实现所需的签名、验签、以及哈希函数，哈希函数选用SHA224、SHA256 使用第三方库hashlib与cryptography实现。  
 <img width="409" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/3fb9afad-79eb-4b86-beff-172741f45cbf">  
@@ -27,4 +27,4 @@ Bob:
 实验中还遇到了一个问题：  
 当bytes类型的签名被编码发送出去再解码后，尽管签名内容没有变，但是签名的数据类型会变成str，而验签的过程中需要传入bytes类型的数据，若编码传入则会改变签名内容导致验证无法通过。  
 经过查找资料，最终通过导入ast模块，使用literal_eval函数成功地将签名解析为了字节串而没有改变其内容，通过了验证。    
-<img width="182" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/3457f008-9462-40cb-a031-e16ffcfd813f">
+<img width="282" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/3457f008-9462-40cb-a031-e16ffcfd813f">
