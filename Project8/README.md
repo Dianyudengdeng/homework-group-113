@@ -8,5 +8,7 @@ AES-NI:
 <img width="156" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/62fd2e78-6cc4-46d3-bdfe-9ce576b90a03">  
   
 AES-Openssl:  
+<img width="470" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/516186d8-dfe9-4175-bfdd-92c7606140e2">  
+<img width="158" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/8bbd7477-84b9-40c4-a476-ed4e36e018e1">  
 
 
