@@ -11,4 +11,6 @@ AES查找表实现与普通版本对比（python实现，运行效率较低）�
 SM4：
 分别实现、测试了普通版本SM4、查找表替代线性变换+Sbox版本、AES-NI+SIMD指令集加速版本  
 各版本加密效率对比：    
-<img width="672" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/4ae7ca87-13b5-4487-8ff0-1c8c24e5b2cc">
+<img width="875" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/26bf1b6a-6e05-4254-a387-03147c15f5ac">  
+可以看到，由于开始加密时出现cache缺失，待加密分组较少时受影响较大，平均每分组加密时间较长，也因此采用更多内存存储的T-Table版本此时效率较普通版本更低。  
+当待加密分组数量达到一定规模，各版本加密分组的时间趋于稳定，
