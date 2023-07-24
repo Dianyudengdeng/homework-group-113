@@ -10,4 +10,5 @@ AES查找表实现与普通版本对比（python实现，运行效率较低）�
 
 SM4：
 分别实现、测试了普通版本SM4、查找表替代线性变换+Sbox版本、AES-NI+SIMD指令集加速版本  
-AES查找表实现与普通版本对比：  
+各版本加密效率对比：    
+<img width="672" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/4ae7ca87-13b5-4487-8ff0-1c8c24e5b2cc">
