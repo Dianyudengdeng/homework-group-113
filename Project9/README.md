@@ -13,4 +13,7 @@ SM4：
 各版本加密效率对比：    
 <img width="875" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/26bf1b6a-6e05-4254-a387-03147c15f5ac">  
 可以看到，由于开始加密时出现cache缺失，待加密分组较少时受影响较大，平均每分组加密时间较长，也因此采用更多内存存储的T-Table版本此时效率较普通版本更低。  
-当待加密分组数量达到一定规模，各版本加密分组的时间趋于稳定，
+当待加密分组数量达到一定规模，各版本加密分组的时间趋于稳定，最终定格在了175ns/block、105ns/blcok、60ns/block。  
+关于AES-NI+SIMD指令集优化的方法，为了适配AES-NI指令一次处理128bit数据，这里采用的时SSE寄存器（128bit），理论上应当由四倍的性能提升，但实际上：  
+<img width="426" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/07548fc9-d395-402d-87ce-3c373c990909">
+由于内存存取的限制，使用128bit寄存器进行并行实际只能带来不到一倍的性能提升，但是通过AES-NI指令同构计算，利用硬件加速的同时打破了内存存取对于并行计算的限制，最终得到了接近三倍的性能提升。
