@@ -12,10 +12,16 @@ RFC6979：Deterministic Usage of the Digital Signature Algorithm (DSA) and Ellip
 <img width="384" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/0d154154-ad5e-4783-aae8-56918bed0bcf">  
   
 tools.py文件实现了SM2签名过程中使用的数论计算及其他操作，共包含以下函数：  
-get_bit_num(x):获得任意结构数据的二进制长度
-extended_euclidean(j, k):拓展欧几里得算法
-mod_inverse(j, n):模逆算法
-point_add (p, q):椭圆曲线点加
-point_double(p):椭圆曲线倍乘
-point_multiply(s, p):椭圆曲线点乘
-generate_key():随机生成密钥对
+get_bit_num(x):获得任意结构数据的二进制长度  
+extended_euclidean(j, k):拓展欧几里得算法  
+mod_inverse(j, n):模逆算法  
+point_add (p, q):椭圆曲线点加  
+point_double(p):椭圆曲线倍乘  
+point_multiply(s, p):椭圆曲线点乘  
+generate_key():随机生成密钥对  
+
+SM2.py实现了SM2签名以及验签的流程，具体可参照代码及文献给出的流程。  
+
+签名结果展示：  
+<img width="597" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/b0c54d92-028f-45cc-94ff-f951d734b37a">
+
