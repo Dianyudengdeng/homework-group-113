@@ -6,3 +6,6 @@ RFC6979：Deterministic Usage of the Digital Signature Algorithm (DSA) and Ellip
 <img width="445" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5ecebeee-a5be-4d5c-982c-41c4729d999c">  
 <img width="450" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d7134987-dd5f-40fb-8979-7577259dd766">  
 <img width="457" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/71426582-8f2f-41ac-8909-7f7f1618901b">  
+依照给定的流程进行实现，对于bits2int(bits, qlen)、bits2octets(bits, mlen)函数，实现中因为 bits 参数的值过大，超出了整数类型所能表示的范围，导致无法将其转换为相应长度的字节序列，触发了 OverflowError: cannot fit 'int' into an index-sized integer 错误。  
+使用 gmpy2 等库来替代 Python 原生的整数类型，从而处理超出标准整数范围的大整数解决了这一问题：  
+<img width="384" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/0d154154-ad5e-4783-aae8-56918bed0bcf">  
