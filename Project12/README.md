@@ -1,3 +1,7 @@
 Project12: verify the above pitfalls with proof-of-concept code  
 主要做的工作：提供以下漏洞的概念验证代码  
+1.Leaking k leads to leaking of d: ECDSA、Schnorr、SM2-sig  
+2.Reusing k leads to leaking of d: ECDSA、Schnorr、SM2-sig  
+3.Two users, using k leads to leaking of d: ECDSA、Schnorr、SM2-sig  
+4.(r,s) and (r,-s)are both valid signatures: ECDSA、Schnorr、SM2-sig  
 <img width="581" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d3e30eb3-0298-44d8-91aa-71435090b75f">
