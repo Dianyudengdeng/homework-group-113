@@ -14,17 +14,6 @@ G_X = 55066263022277343669578718895168534326250603453777594175500187360389116729
 G_Y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
 G = (G_X, G_Y)
 
-'''
-extended_euclidean_algorithm()扩展欧几里得算法<br>
-mod_inverse()模逆运算<br>
-elliptic_add()椭圆曲线加<br>
-elliptic_double()椭圆曲线自加<br>
-elliptic_multiply()椭圆曲线倍点运算<br>
-generate_key()生成公私钥对<br>
-sign()实现sm2签名<br>
-verify()实现sm2验证签名<br>
-'''
-
 def get_bit_num(x):
     if isinstance(x, int):
         num = 0
