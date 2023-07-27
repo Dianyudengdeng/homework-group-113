@@ -3,5 +3,5 @@ Project12: verify the above pitfalls with proof-of-concept code
 1.Leaking k leads to leaking of d: ECDSA、Schnorr、SM2-sig  
 2.Reusing k leads to leaking of d: ECDSA、Schnorr、SM2-sig  
 3.Reusing k by different users leads to leaking of d: ECDSA、Schnorr、SM2-sig  
-4.(r,s) and (r,-s)are both valid signatures: ECDSA、Schnorr、SM2-sig  
+4.(r,s) and (r,-s)are both valid signatures: ECDSA、Schnorr  
 <img width="581" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d3e30eb3-0298-44d8-91aa-71435090b75f">
