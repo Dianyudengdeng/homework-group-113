@@ -2,5 +2,7 @@ Project13: Implement the above ECMH scheme
 主要做的工作：  
 <img width="548" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/2d0958c4-faea-49ff-bfd0-a7f255ca4b74">  
 
-<img width="509" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/c2360da1-490d-4408-842a-e462b852247b">
+<img width="515" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/a85fb66b-7aad-4405-a365-3e88fa096843">  
 
+<img width="415" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d9157a71-9f8a-4c27-85ef-7f49d0051bbb">  
+ 
