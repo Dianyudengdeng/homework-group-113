@@ -14,3 +14,4 @@ hash_to_field:使用expand_message_xmd实现
 使用给出的Sage程序求解椭圆曲线点Z：  
 <img width="415" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d9157a71-9f8a-4c27-85ef-7f49d0051bbb">  
  
+获得Q0、Q1后，最终使用使用点加计算R = Q0 + Q1获得msg在椭圆曲线上最终的对应点。  
