@@ -4,7 +4,7 @@ Project13: Implement the above ECMH scheme
 可以看到，hash_to_curve由以下部分组成：  
 <img width="505" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/fd2ec4ae-bd78-40b0-87f3-45830c194c06">
 
-
+hash_to_field:使用expand_message_xmd实现
 <img width="548" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/2d0958c4-faea-49ff-bfd0-a7f255ca4b74">  
 
 <img width="515" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/a85fb66b-7aad-4405-a365-3e88fa096843">    
