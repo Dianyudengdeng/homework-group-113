@@ -1,5 +1,5 @@
 # Project6：Impl this protocol with actual network communication (Range Proof With Hash Function)  
-## 主要做的工作：实现基础的对于年龄的Range Proof；模拟实际网络环境，进行数据传输，实现可信第三方、证明者、验证者的交互。
+### 主要做的工作：实现基础的对于年龄的Range Proof；模拟实际网络环境，进行数据传输，实现可信第三方、证明者、验证者的交互。
 Cryptography.py 定义了实现所需的签名、验签、以及哈希函数，哈希函数选用SHA224、SHA256 使用第三方库hashlib与cryptography实现。  
 <img width="409" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/3fb9afad-79eb-4b86-beff-172741f45cbf">  
 参照这张图完成了Range Proof With Hash Function各参与方对于接受的消息的处理逻辑。  
