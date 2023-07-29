@@ -11,5 +11,6 @@
 ##### 参与者2：  
 ![image](https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/1d16dbb0-0f4a-4854-a83f-7c0613ff2959)  
 
+#### 数据传输过程中的问题：  
 为了模拟实际网络环境需要进行大量的数据传输，对于传输后的数据，作为bytes类型可直接传入签名流程函数中，但会导致错误的签名结果使得验签流程无法通过。  
 为解决这个问题，需要首先进行decode，随后使用ast.literal_eval进行处理还原，还原后可得到正确的签名结果。  
