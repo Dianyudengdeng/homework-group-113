@@ -7,11 +7,62 @@
 ### RFC6979：
 Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)定义了一种基于HMAC的**确定性随机数生成算法**，通过使用哈希函数和HMAC来计算签名所需的随机数k，这种算法保证在相同的私钥和消息输入情况下，每次生成的随机数k都是确定性的，从而消除了传统随机数生成器可能导致的安全问题。  
 #### 确定性生成方式：  
-<img width="445" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5ecebeee-a5be-4d5c-982c-41c4729d999c">   
-  
-<img width="450" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d7134987-dd5f-40fb-8979-7577259dd766">   
-  
-<img width="457" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/71426582-8f2f-41ac-8909-7f7f1618901b">   
+```python
+def generate_k(msg, private_key, q, q_bits=256, hash_function=hashlib.sha256):
+    """
+    Generate the deterministic random value k according to RFC 6979.
+
+    Parameters:
+        msg (bytes): The message to be signed (hashed).
+        private_key (int): The private key used for signing.
+        q_bits (int): The bit length of the elliptic curve order (q).
+        hash_function (callable): The hash function to use for HMAC (default: SHA-256).
+
+    Returns:
+        int: The deterministic random value k.
+    """
+    hlen = hash_function().digest_size * 8
+    qlen = math.ceil(q_bits / 8) * 8
+
+    # Step a
+    h1 = hash_function(msg.encode()).digest()
+
+    # Step b
+    V = b'\x01' * math.ceil(hlen / 8)
+
+    # Step c
+    K = b'\x00' * math.ceil(hlen / 8)
+
+    # Step d
+    K = hmac.new(K, V + b'\x00' + private_key.to_bytes(math.ceil(q_bits / 8), byteorder='big') + h1, hash_function).digest()
+    # Step e
+    V = hmac.new(K, V, hash_function).digest()
+
+    # Step f
+    K = hmac.new(K, V + b'\x01' + private_key.to_bytes(math.ceil(q_bits / 8), byteorder='big') + h1, hash_function).digest()
+
+    # Step g
+    V = hmac.new(K, V, hash_function).digest()
+
+    # Step h
+    T = b''
+    tlen = 0
+
+    while tlen < qlen:
+        V = hmac.new(K, V, hash_function).digest()
+        T = T + V
+
+        tlen = len(T) * 8
+        k = bits2int(int.from_bytes(T, byteorder='big'), qlen)
+
+        if 1 <= k < q - 1:
+            return k
+
+        K = hmac.new(K, V + b'\x00', hash_function).digest()
+        V = hmac.new(K, V, hash_function).digest()
+
+    raise ValueError("Failed to generate a valid k value.")
+```
   
 依照给定的流程进行实现，对于bits2int(bits, qlen)、bits2octets(bits, mlen)函数，实现中因为 bits 参数的值过大，超出了整数类型所能表示的范围，导致无法将其转换为相应长度的字节序列，触发了 OverflowError: cannot fit 'int' into an index-sized integer 错误。  
 通过使用 gmpy2 等库来替代 Python 原生的整数类型，以处理超出标准整数范围的大整数，解决了这一问题：  
