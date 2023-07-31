@@ -15,5 +15,5 @@
 
 <img width="158" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/8bbd7477-84b9-40c4-a476-ed4e36e018e1">  
 
-可以看到，运行效率上大致相差了35000倍，充分说明了硬件实现与软件实现间的差距，为后面使用AES-NI指令加速SM4提供了前提。  
+可以看到，运行效率上大致相差了**35000**倍，充分说明了硬件实现与软件实现间的差距，为后面使用AES-NI指令加速SM4提供了前提。  
 
