@@ -8,9 +8,11 @@
 Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)定义了一种基于HMAC的**确定性随机数生成算法**，通过使用哈希函数和HMAC来计算签名所需的随机数k，这种算法保证在相同的私钥和消息输入情况下，每次生成的随机数k都是确定性的，从而消除了传统随机数生成器可能导致的安全问题。  
 #### 确定性生成方式：  
 <img width="445" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5ecebeee-a5be-4d5c-982c-41c4729d999c">   
+  
 <img width="450" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d7134987-dd5f-40fb-8979-7577259dd766">   
+  
 <img width="457" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/71426582-8f2f-41ac-8909-7f7f1618901b">   
-
+  
 依照给定的流程进行实现，对于bits2int(bits, qlen)、bits2octets(bits, mlen)函数，实现中因为 bits 参数的值过大，超出了整数类型所能表示的范围，导致无法将其转换为相应长度的字节序列，触发了 OverflowError: cannot fit 'int' into an index-sized integer 错误。  
 通过使用 gmpy2 等库来替代 Python 原生的整数类型，以处理超出标准整数范围的大整数，解决了这一问题：  
 ```python
