@@ -14,7 +14,7 @@
  P = client_socket.recv(1024).decode()
  P = ast.literal_eval(P)
   ```
-  ### 运算过程中的问题
+  ### 运算过程中的问题:
   在域上做运算时由于数值过大溢出了python整型支持的范围。
   为解决这个问题，需要在对应可能发生溢出的地方先对变量使用gmpy2.mpz处理。
   ```python
