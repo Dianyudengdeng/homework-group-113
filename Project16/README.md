@@ -17,4 +17,8 @@
 ![image](https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/d274b3a0-a010-4142-9829-a1d186b32b96)
 
 
-#### 数据传输过程中的问题：
+#### 解密过程中的问题：  
+主要问题在于因为传输/输出需要而带来的数据格式问题，比如在加密端的XOR处理的M为普通的明文字符串，可直接按照字符串进行迭代：  
+![image](https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/bfa8b0f7-4685-4b6b-b15f-4738f394f03a)  
+而解密端的XOR处理的C2则为由两个十六进制数为一组构成的字符串，需要采取不同的迭代方式：  
+![image](https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/5a262c55-9c36-4ec9-933b-1697303dd89c)  
