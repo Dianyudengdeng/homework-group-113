@@ -49,7 +49,9 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 利用Merkle Audit Paths实现Inclusion proof for specified element和Inclusion proof for specified element;实现Merkle Consistency Proofs
 - 测试程序在进行Inclusion Proof时的效率
 
-实验结果：可正常实现树的构建；由于Merkle Rree - InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，尽管可以直观感受到树构建过程的时间差异，InclusionProof的时间开销并没有较大的差异 [link](https://github.com/Dianyudengdeng/homework-group-113/tree/main/Project5#readme)
+实验结果：
+- 可正常实现树的构建
+- 由于Merkle Rree - InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，尽管可以直观感受到树构建过程的时间差异，InclusionProof的时间开销并没有较大的差异 [link](https://github.com/Dianyudengdeng/homework-group-113/tree/main/Project5#readme)
 
 #### Project6: impl this protocol with actual network communication
 主要工作：
