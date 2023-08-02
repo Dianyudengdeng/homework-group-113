@@ -15,7 +15,7 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 修改Project4 SM3的实现方式，提供利于攻击的API以及避免多线程加速时出现混乱
 - 完成各类数据结构相互转换的工作，实施基础的生日攻击
 
-实验结果：经过约五万次哈希在一秒内找到了前32bits的碰撞
+实验结果：经过约五万次哈希在一秒内找到了前32bits的碰撞 [link](https://user-images.githubusercontent.com/93588357/253812738-f21a1401-be2e-4308-a7bb-c8bf87e0fb3d.png)
 
 #### Project2: implement the Rho method of reduced SM3
 主要工作：
@@ -23,14 +23,14 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 修改Rho Method寻找SM3的部分字节碰撞
 - 优化加速寻找碰撞；分析不同迭代方法的区别
 
-实验结果：经过约两万次哈希在一秒内找到了前32bits的碰撞
+实验结果：经过约两万次哈希在一秒内找到了前32bits的碰撞 [link](https://user-images.githubusercontent.com/93588357/254323716-712cba25-74fd-48d1-b25d-1abf11b62c61.png)
 
 #### Project3: implement length extension attack for -  SM3, SHA256, etc.
 主要工作：
 - 修改Hash的主体算法，使得迭代压缩中可以利用已有的哈希值生成新的有效哈希对
 - 编写独立的padding函数，直接获得哈希结果以验证长度扩展攻击效果
 
-实验结果：实现了在不同攻击场景下的长度扩展攻击
+实验结果：实现了在不同攻击场景下的长度扩展攻击 [SM3](https://user-images.githubusercontent.com/93588357/257284376-e0349905-6268-4e51-8335-6de1a80aace7.png) [SHA256](https://user-images.githubusercontent.com/93588357/257284573-335c48ee-2c3a-43aa-81fd-f40a1e768268.png)
 
 #### Project4: do your best to optimize SM3 implementation (software)
 主要工作：
@@ -49,7 +49,7 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 利用Merkle Audit Paths实现Inclusion proof for specified element和Inclusion proof for specified element;实现Merkle Consistency Proofs
 - 测试程序在进行Inclusion Proof时的效率
 
-实验结果：可正常实现树的构建；由于Merkle Rree - InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，尽管可以直观感受到树构建过程的时间差异，InclusionProof的时间开销并没有较大的差异。
+实验结果：可正常实现树的构建；由于Merkle Rree - InclusionProof的时间复杂度为O(log n)，所以在结点数量差异较大的情况下，尽管可以直观感受到树构建过程的时间差异，InclusionProof的时间开销并没有较大的差异 [link](https://github.com/Dianyudengdeng/homework-group-113/tree/main/Project5#readme)
 
 #### Project6: impl this protocol with actual network communication
 主要工作：
@@ -91,6 +91,7 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 3.Reusing k by different users leads to leaking of d: ECDSA、Schnorr、SM2-sig  
 4.(r,s) and (r,-s)are both valid signatures: ECDSA、Schnorr  
 5.Same d and k with ECDSA, leads to leaking of d: Schnorr、SM2-sig  
+
 实验结果：[link](https://github.com/Dianyudengdeng/homework-group-113/blob/main/Project12/README.md)
 
 #### Project13: Implement the above ECMH scheme
