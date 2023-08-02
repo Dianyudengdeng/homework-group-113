@@ -67,8 +67,11 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 各实现方式效率测试，数据分析   
 
 实验结果：
+
 **SM4**：
+
 各版本加密效率对比：    
+
 <img width="875" alt="image" src="https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/26bf1b6a-6e05-4254-a387-03147c15f5ac">  
 最终SM4的加密效率位60ns/Block
 
@@ -111,8 +114,11 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 模拟实际网络环境进行交互
 
 实验结果：
+
 参与者1：[P1](https://user-images.githubusercontent.com/93588357/256998041-f1980dff-0024-4746-945f-735fc9a5be9e.png)
+
 参与者2：[P2](https://user-images.githubusercontent.com/93588357/256998050-1d16dbb0-0f4a-4854-a83f-7c0613ff2959.png)
+
 #### Project16: implement sm2 2P decrypt with real network communication
 主要工作：
 - 实现sm2加密算法
@@ -120,8 +126,11 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 - 模拟实际网络环境进行交互
 
 实验结果：
+
 参与者1：[P1](https://user-images.githubusercontent.com/93588357/257146874-131e312b-11f2-458c-aac8-a3085d5add15.png)
+
 参与者2：[P2](https://user-images.githubusercontent.com/93588357/257146819-d274b3a0-a010-4142-9829-a1d186b32b96.png)
+
 ### Bitcon
 #### Project19: forge a signature to pretend that you are Satoshi
 主要工作：
