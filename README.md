@@ -1,13 +1,14 @@
 # 创新创业实践作业
 ## 说明
-个人完成
+### 个人完成：
 - 姓名：胡达
 - 年级：2021级
 - 学号：302100460030
 - 本仓库包含已经完成的全部Project，以及对应的实验报告
-## 已经实现
+
 ### 实验环境：
 CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+## 已经实现
 ### SM3
 #### Project1: implement the naïve birthday attack of reduced SM3
 主要工作：
@@ -138,14 +139,14 @@ CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
 实验结果：[link](https://github.com/Dianyudengdeng/homework-group-113/blob/main/Project21/README.md)
 ### Eth
 #### Project22: research report on MPT
-### 部分实现
+## 部分实现
 #### Project8: AES impl with ARM instruction
 主要工作：
 - 测试AES-NI加密效率
 - 测试Openssl 加密效率
 
 实验结果：[link](https://github.com/Dianyudengdeng/homework-group-113/blob/main/Project8/README.md)
-### 未完成
+## 未完成
 - Project7: Try to Implement this scheme
 - Project17：比较Firefox和谷歌的记住密码插件的实现区别
-- Project18: send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yoursel
+- Project18: send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yourself
