@@ -17,4 +17,4 @@
 ### SHA256：
 ![image](https://github.com/Dianyudengdeng/homework-group-113/assets/93588357/335c48ee-2c3a-43aa-81fd-f40a1e768268)
 
-**通过长度扩展攻击，生成有效哈希对以实现进一步攻击。*
+**通过长度扩展攻击，生成有效哈希对以实现进一步攻击。**
